@@ -21,5 +21,5 @@ INSERT INTO People (name, inbetalat) VALUES ("Philip J", 1150);
 INSERT INTO People (name, inbetalat) VALUES ("Filip L", 500);
 INSERT INTO People (name, inbetalat) VALUES ("Casper", 425);
 INSERT INTO People (name, inbetalat) VALUES ("Samuel", 425);
-INSERT INTO People (name, inbetalat) VALUES ("Hanna", 1225);
+INSERT INTO People (name, inbetalat) VALUES ("Hanna", 1615);
 INSERT INTO People (name, inbetalat) VALUES ("Felix", 1025);
