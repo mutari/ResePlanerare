@@ -101,7 +101,7 @@
 
 <div class="info">
 	<div class="totP">
-		<p>Hur många är vi? {antalMenniskor}kr</p>
+		<p>Hur många är vi? {antalMenniskor}</p>
 		<p>Vad kommer det att kosta per person (cha)? {totalPerPerson}kr</p>
 	</div>
 	<div class="stugan">
@@ -140,7 +140,7 @@
 					<tr>
 						<td>{i}.</td>
 						<td>{name}</td>
-						<td>{(totaltPrisStuga/antalMenniskor) - inbetalat}kr</td>
+						<td>{((totaltPrisStuga+forsakring)/antalMenniskor) - inbetalat}kr</td>
 						<td>{inbetalat}kr</td>
 					</tr>
 				{/each}
