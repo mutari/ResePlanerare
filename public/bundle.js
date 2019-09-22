@@ -336,7 +336,11 @@ var app = (function () {
 
     // (139:4) {#each manniksor as {name, inbetalat}
     function create_each_block(ctx) {
+<<<<<<< HEAD
     	var tr, td0, t0, t1, t2, td1, t3_value = ctx.name + "", t3, t4, td2, t5_value = ((ctx.totaltPrisStuga+ctx.forsakring)/ctx.antalMenniskor) - ctx.inbetalat + "", t5, t6, t7, td3, t8_value = ctx.inbetalat + "", t8, t9, t10;
+=======
+    	var tr, td0, t0, t1, t2, td1, t3_value = ctx.name, t3, t4, td2, t5_value = ((ctx.totaltPrisStuga+ctx.forsakring)/ctx.antalMenniskor) - ctx.inbetalat, t5, t6, t7, td3, t8_value = ctx.inbetalat, t8, t9, t10;
+>>>>>>> 9112cec8972e41077ce94796a880e289bcfc9fbf
 
     	const block = {
     		c: function create() {
@@ -356,6 +360,7 @@ var app = (function () {
     			t8 = text(t8_value);
     			t9 = text("kr");
     			t10 = space();
+<<<<<<< HEAD
     			attr_dev(td0, "class", "svelte-2meer");
     			add_location(td0, file, 140, 6, 2378);
     			attr_dev(td1, "class", "svelte-2meer");
@@ -363,6 +368,15 @@ var app = (function () {
     			attr_dev(td2, "class", "svelte-2meer");
     			add_location(td2, file, 142, 6, 2420);
     			attr_dev(td3, "class", "svelte-2meer");
+=======
+    			attr(td0, "class", "svelte-2meer");
+    			add_location(td0, file, 140, 6, 2378);
+    			attr(td1, "class", "svelte-2meer");
+    			add_location(td1, file, 141, 6, 2398);
+    			attr(td2, "class", "svelte-2meer");
+    			add_location(td2, file, 142, 6, 2420);
+    			attr(td3, "class", "svelte-2meer");
+>>>>>>> 9112cec8972e41077ce94796a880e289bcfc9fbf
     			add_location(td3, file, 143, 6, 2497);
     			add_location(tr, file, 139, 5, 2367);
     		},
@@ -391,8 +405,13 @@ var app = (function () {
     				set_data_dev(t3, t3_value);
     			}
 
+<<<<<<< HEAD
     			if ((changed.totaltPrisStuga || changed.forsakring || changed.antalMenniskor || changed.manniksor) && t5_value !== (t5_value = ((ctx.totaltPrisStuga+ctx.forsakring)/ctx.antalMenniskor) - ctx.inbetalat + "")) {
     				set_data_dev(t5, t5_value);
+=======
+    			if ((changed.totaltPrisStuga || changed.forsakring || changed.antalMenniskor || changed.manniksor) && t5_value !== (t5_value = ((ctx.totaltPrisStuga+ctx.forsakring)/ctx.antalMenniskor) - ctx.inbetalat)) {
+    				set_data(t5, t5_value);
+>>>>>>> 9112cec8972e41077ce94796a880e289bcfc9fbf
     			}
 
     			if ((changed.manniksor) && t8_value !== (t8_value = ctx.inbetalat + "")) {
@@ -516,16 +535,25 @@ var app = (function () {
     			add_location(div1, file, 95, 0, 1512);
     			add_location(p0, file, 103, 2, 1633);
     			add_location(p1, file, 104, 2, 1676);
+<<<<<<< HEAD
     			attr_dev(div2, "class", "totP svelte-2meer");
+=======
+    			attr(div2, "class", "totP svelte-2meer");
+>>>>>>> 9112cec8972e41077ce94796a880e289bcfc9fbf
     			add_location(div2, file, 102, 1, 1612);
     			add_location(p2, file, 107, 2, 1777);
     			add_location(p3, file, 108, 2, 1825);
     			add_location(p4, file, 109, 2, 1861);
+<<<<<<< HEAD
     			attr_dev(div3, "class", "stugan svelte-2meer");
+=======
+    			attr(div3, "class", "stugan svelte-2meer");
+>>>>>>> 9112cec8972e41077ce94796a880e289bcfc9fbf
     			add_location(div3, file, 106, 1, 1754);
     			add_location(p5, file, 112, 2, 1919);
     			add_location(p6, file, 113, 2, 1959);
     			add_location(p7, file, 114, 2, 1989);
+<<<<<<< HEAD
     			attr_dev(div4, "class", "things svelte-2meer");
     			add_location(div4, file, 111, 1, 1896);
     			attr_dev(th0, "colspan", "4");
@@ -549,6 +577,31 @@ var app = (function () {
     			attr_dev(div5, "class", "per svelte-2meer");
     			add_location(div5, file, 116, 1, 2020);
     			attr_dev(div6, "class", "info svelte-2meer");
+=======
+    			attr(div4, "class", "things svelte-2meer");
+    			add_location(div4, file, 111, 1, 1896);
+    			attr(th0, "colspan", "4");
+    			attr(th0, "class", "svelte-2meer");
+    			add_location(th0, file, 120, 5, 2073);
+    			add_location(tr0, file, 119, 4, 2063);
+    			attr(th1, "class", "svelte-2meer");
+    			add_location(th1, file, 125, 5, 2166);
+    			attr(th2, "class", "svelte-2meer");
+    			add_location(th2, file, 126, 5, 2181);
+    			attr(th3, "class", "svelte-2meer");
+    			add_location(th3, file, 129, 5, 2213);
+    			attr(th4, "class", "svelte-2meer");
+    			add_location(th4, file, 132, 5, 2251);
+    			attr(tr1, "class", "about");
+    			add_location(tr1, file, 124, 4, 2142);
+    			add_location(thead, file, 118, 3, 2051);
+    			add_location(tbody, file, 137, 3, 2308);
+    			attr(table, "class", "svelte-2meer");
+    			add_location(table, file, 117, 2, 2040);
+    			attr(div5, "class", "per svelte-2meer");
+    			add_location(div5, file, 116, 1, 2020);
+    			attr(div6, "class", "info svelte-2meer");
+>>>>>>> 9112cec8972e41077ce94796a880e289bcfc9fbf
     			add_location(div6, file, 101, 0, 1592);
     		},
 
@@ -566,6 +619,7 @@ var app = (function () {
     				each_blocks_1[i].m(div1, null);
     			}
 
+<<<<<<< HEAD
     			insert_dev(target, t2, anchor);
     			insert_dev(target, div6, anchor);
     			append_dev(div6, div2);
@@ -628,6 +682,70 @@ var app = (function () {
     			append_dev(table, tbody);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
+=======
+    			insert(target, t2, anchor);
+    			insert(target, div6, anchor);
+    			append(div6, div2);
+    			append(div2, p0);
+    			append(p0, t3);
+    			append(p0, t4);
+    			append(div2, t5);
+    			append(div2, p1);
+    			append(p1, t6);
+    			append(p1, t7);
+    			append(p1, t8);
+    			append(div6, t9);
+    			append(div6, div3);
+    			append(div3, p2);
+    			append(p2, t10);
+    			append(p2, t11);
+    			append(p2, t12);
+    			append(div3, t13);
+    			append(div3, p3);
+    			append(p3, t14);
+    			append(p3, t15);
+    			append(p3, t16);
+    			append(div3, t17);
+    			append(div3, p4);
+    			append(p4, t18);
+    			append(p4, t19);
+    			append(p4, t20);
+    			append(div6, t21);
+    			append(div6, div4);
+    			append(div4, p5);
+    			append(p5, t22);
+    			append(p5, t23);
+    			append(p5, t24);
+    			append(div4, t25);
+    			append(div4, p6);
+    			append(p6, t26);
+    			append(p6, t27);
+    			append(p6, t28);
+    			append(div4, t29);
+    			append(div4, p7);
+    			append(p7, t30);
+    			append(p7, t31);
+    			append(p7, t32);
+    			append(div6, t33);
+    			append(div6, div5);
+    			append(div5, table);
+    			append(table, thead);
+    			append(thead, tr0);
+    			append(tr0, th0);
+    			append(thead, t35);
+    			append(thead, tr1);
+    			append(tr1, th1);
+    			append(tr1, t36);
+    			append(tr1, th2);
+    			append(tr1, t38);
+    			append(tr1, th3);
+    			append(tr1, t40);
+    			append(tr1, th4);
+    			append(table, t42);
+    			append(table, tbody);
+
+    			for (var i = 0; i < each_blocks.length; i += 1) {
+>>>>>>> 9112cec8972e41077ce94796a880e289bcfc9fbf
     				each_blocks[i].m(tbody, null);
     			}
     		},
@@ -660,6 +778,7 @@ var app = (function () {
     			}
 
     			if (changed.totalPerPerson) {
+<<<<<<< HEAD
     				set_data_dev(t7, ctx.totalPerPerson);
     			}
 
@@ -685,6 +804,33 @@ var app = (function () {
 
     			if (changed.buss) {
     				set_data_dev(t31, ctx.buss);
+=======
+    				set_data(t7, ctx.totalPerPerson);
+    			}
+
+    			if (changed.totaltPrisStuga) {
+    				set_data(t11, ctx.totaltPrisStuga);
+    			}
+
+    			if (changed.forsakring) {
+    				set_data(t15, ctx.forsakring);
+    			}
+
+    			if (changed.totalt) {
+    				set_data(t19, ctx.totalt);
+    			}
+
+    			if (changed.hyraUtrustning) {
+    				set_data(t23, ctx.hyraUtrustning);
+    			}
+
+    			if (changed.skiPass) {
+    				set_data(t27, ctx.skiPass);
+    			}
+
+    			if (changed.buss) {
+    				set_data(t31, ctx.buss);
+>>>>>>> 9112cec8972e41077ce94796a880e289bcfc9fbf
     			}
 
     			if (changed.manniksor || changed.totaltPrisStuga || changed.forsakring || changed.antalMenniskor) {
