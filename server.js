@@ -28,13 +28,14 @@ app.get('/bundle.css', (req, res) => {
 app.post('/GetData', (req, res) => {
 
     con.query('SELECT * FROM Lindvalen;', (err, result) => {
-        con.query('SELECT * FROM People;', (err, result2) => {
+        if(err != null) console.log(err);
+	con.query('SELECT * FROM People;', (err, result2) => {
             res.json({info: result[0],people: result2});
         });
     });
 
 });
 
-app.listen('3000', (err) => {
-    console.log("server started at port 3000");
+app.listen('80', (err) => {
+    console.log("server started at port 80");
 })
