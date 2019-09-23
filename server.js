@@ -9,6 +9,14 @@ var con = mysql.createConnection({
     database: 'resa'
 });
 
+var count = 0;
+
+var log = (req, res, next) => {
+    count++;
+    console.log("number of users :: ", count);
+    next();
+}
+
 app.get('/', (req, res) => {
     res.sendFile(__dirname + "/public/index.html");
 });
@@ -25,7 +33,7 @@ app.get('/bundle.css', (req, res) => {
     res.sendFile(__dirname + "/public/bundle.css");
 });
 
-app.post('/GetData', (req, res) => {
+app.post('/GetData',log, (req, res) => {
 
     con.query('SELECT * FROM Lindvalen;', (err, result) => {
         if(err != null) console.log(err);
@@ -36,6 +44,6 @@ app.post('/GetData', (req, res) => {
 
 });
 
-app.listen('80', (err) => {
+app.listen('3000', (err) => {
     console.log("server started at port 80");
 })
