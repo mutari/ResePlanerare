@@ -44,6 +44,6 @@ app.post('/GetData',log, (req, res) => {
 
 });
 
-app.listen('3000', (err) => {
+app.listen('80', (err) => {
     console.log("server started at port 80");
 })
