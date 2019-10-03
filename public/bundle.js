@@ -260,6 +260,7 @@ var app = (function () {
     	const child_ctx = Object.create(ctx);
     	child_ctx.name = list[i].name;
     	child_ctx.inbetalat = list[i].inbetalat;
+    	child_ctx.inbetalatBuss = list[i].inbetalatBuss;
     	child_ctx.i = i;
     	return child_ctx;
     }
@@ -301,9 +302,9 @@ var app = (function () {
     	};
     }
 
-    // (139:4) {#each manniksor as {name, inbetalat}
+    // (142:4) {#each manniksor as {name, inbetalat, inbetalatBuss}
     function create_each_block(ctx) {
-    	var tr, td0, t0, t1, t2, td1, t3_value = ctx.name, t3, t4, td2, t5_value = ((ctx.totaltPrisStuga+ctx.forsakring)/ctx.antalMenniskor) - ctx.inbetalat, t5, t6, t7, td3, t8_value = ctx.inbetalat, t8, t9, t10;
+    	var tr, td0, t0, t1, t2, td1, t3_value = ctx.name, t3, t4, td2, t5_value = ((ctx.totaltPrisStuga+ctx.forsakring)/ctx.antalMenniskor) - ctx.inbetalat, t5, t6, t7, td3, t8_value = ctx.inbetalat, t8, t9, t10, td4, t11_value = ctx.inbetalatBuss, t11, t12;
 
     	return {
     		c: function create() {
@@ -323,15 +324,20 @@ var app = (function () {
     			t8 = text(t8_value);
     			t9 = text("kr");
     			t10 = space();
+    			td4 = element("td");
+    			t11 = text(t11_value);
+    			t12 = space();
     			attr(td0, "class", "svelte-2meer");
-    			add_location(td0, file, 140, 6, 2378);
+    			add_location(td0, file, 143, 6, 2463);
     			attr(td1, "class", "svelte-2meer");
-    			add_location(td1, file, 141, 6, 2398);
+    			add_location(td1, file, 144, 6, 2483);
     			attr(td2, "class", "svelte-2meer");
-    			add_location(td2, file, 142, 6, 2420);
+    			add_location(td2, file, 145, 6, 2505);
     			attr(td3, "class", "svelte-2meer");
-    			add_location(td3, file, 143, 6, 2497);
-    			add_location(tr, file, 139, 5, 2367);
+    			add_location(td3, file, 146, 6, 2582);
+    			attr(td4, "class", "svelte-2meer");
+    			add_location(td4, file, 147, 6, 2611);
+    			add_location(tr, file, 142, 5, 2452);
     		},
 
     		m: function mount(target, anchor) {
@@ -351,6 +357,9 @@ var app = (function () {
     			append(td3, t8);
     			append(td3, t9);
     			append(tr, t10);
+    			append(tr, td4);
+    			append(td4, t11);
+    			append(tr, t12);
     		},
 
     		p: function update(changed, ctx) {
@@ -365,6 +374,10 @@ var app = (function () {
     			if ((changed.manniksor) && t8_value !== (t8_value = ctx.inbetalat)) {
     				set_data(t8, t8_value);
     			}
+
+    			if ((changed.manniksor) && t11_value !== (t11_value = ctx.inbetalatBuss)) {
+    				set_data(t11, t11_value);
+    			}
     		},
 
     		d: function destroy(detaching) {
@@ -376,7 +389,7 @@ var app = (function () {
     }
 
     function create_fragment(ctx) {
-    	var div0, h1, t1, div1, t2, div6, div2, p0, t3, t4, t5, p1, t6, t7, t8, t9, div3, p2, t10, t11, t12, t13, p3, t14, t15, t16, t17, p4, t18, t19, t20, t21, div4, p5, t22, t23, t24, t25, p6, t26, t27, t28, t29, p7, t30, t31, t32, t33, div5, table, thead, tr0, th0, t35, tr1, th1, t36, th2, t38, th3, t40, th4, t42, tbody;
+    	var div0, h1, t1, div1, t2, div6, div2, p0, t3, t4, t5, p1, t6, t7, t8, t9, div3, p2, t10, t11, t12, t13, p3, t14, t15, t16, t17, p4, t18, t19, t20, t21, div4, p5, t22, t23, t24, t25, p6, t26, t27, t28, t29, p7, t30, t31, t32, t33, div5, table, thead, tr0, th0, t35, tr1, th1, t36, th2, t38, th3, t40, th4, t42, th5, t44, tbody;
 
     	var each_value_1 = ctx.manniksor;
 
@@ -464,11 +477,14 @@ var app = (function () {
     			th2.textContent = "Namn";
     			t38 = space();
     			th3 = element("th");
-    			th3.textContent = "Ska betala";
+    			th3.textContent = "Ska betala för stugan";
     			t40 = space();
     			th4 = element("th");
-    			th4.textContent = "Inbetalat";
+    			th4.textContent = "Inbetalat för stugan";
     			t42 = space();
+    			th5 = element("th");
+    			th5.textContent = "Inbetalat för bussen";
+    			t44 = space();
     			tbody = element("tbody");
 
     			for (var i = 0; i < each_blocks.length; i += 1) {
@@ -493,7 +509,7 @@ var app = (function () {
     			add_location(p7, file, 114, 2, 1989);
     			attr(div4, "class", "things svelte-2meer");
     			add_location(div4, file, 111, 1, 1896);
-    			attr(th0, "colspan", "4");
+    			attr(th0, "colspan", "5");
     			attr(th0, "class", "svelte-2meer");
     			add_location(th0, file, 120, 5, 2073);
     			add_location(tr0, file, 119, 4, 2063);
@@ -504,11 +520,13 @@ var app = (function () {
     			attr(th3, "class", "svelte-2meer");
     			add_location(th3, file, 129, 5, 2213);
     			attr(th4, "class", "svelte-2meer");
-    			add_location(th4, file, 132, 5, 2251);
+    			add_location(th4, file, 132, 5, 2262);
+    			attr(th5, "class", "svelte-2meer");
+    			add_location(th5, file, 135, 5, 2310);
     			attr(tr1, "class", "about");
     			add_location(tr1, file, 124, 4, 2142);
     			add_location(thead, file, 118, 3, 2051);
-    			add_location(tbody, file, 137, 3, 2308);
+    			add_location(tbody, file, 140, 3, 2378);
     			attr(table, "class", "svelte-2meer");
     			add_location(table, file, 117, 2, 2040);
     			attr(div5, "class", "per svelte-2meer");
@@ -589,7 +607,9 @@ var app = (function () {
     			append(tr1, th3);
     			append(tr1, t40);
     			append(tr1, th4);
-    			append(table, t42);
+    			append(tr1, t42);
+    			append(tr1, th5);
+    			append(table, t44);
     			append(table, tbody);
 
     			for (var i = 0; i < each_blocks.length; i += 1) {

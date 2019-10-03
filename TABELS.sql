@@ -1,3 +1,6 @@
+DROP TABLE Lindvalen; 
+DROP TABLE People;
+
 CREATE TABLE Lindvalen (
     totaltPrisStuga int,
     forsakring int,
@@ -6,20 +9,21 @@ CREATE TABLE Lindvalen (
     skiPass int
 );
 
-INSERT INTO Lindvalen (totaltPrisStuga, forsakring, hyraUtrustning, buss, skiPass) VALUES (12915, 595, 992, 1000, 2277);
+INSERT INTO Lindvalen (totaltPrisStuga, forsakring, hyraUtrustning, buss, skiPass) VALUES (12915, 595, 992, 1428, 2277);
 
 
 CREATE TABLE People (
     name varchar(255),
-    inbetalat int
+    inbetalat int,
+    inbetalatBuss int
 );
 
 
-INSERT INTO People (name, inbetalat) VALUES ("Aom", 1125);
-INSERT INTO People (name, inbetalat) VALUES ("Filip G", 300);
-INSERT INTO People (name, inbetalat) VALUES ("Philip J", 1150);
-INSERT INTO People (name, inbetalat) VALUES ("Filip L", 500);
-INSERT INTO People (name, inbetalat) VALUES ("Casper", 425);
-INSERT INTO People (name, inbetalat) VALUES ("Samuel", 425);
-INSERT INTO People (name, inbetalat) VALUES ("Hanna", 1615);
-INSERT INTO People (name, inbetalat) VALUES ("Felix", 1025);
+INSERT INTO People (name, inbetalat, inbetalatBuss) VALUES ("Aom", 1689, 800);
+INSERT INTO People (name, inbetalat, inbetalatBuss) VALUES ("Filip G", 300, 0);
+INSERT INTO People (name, inbetalat, inbetalatBuss) VALUES ("Philip J", 1150, 1428);
+INSERT INTO People (name, inbetalat, inbetalatBuss) VALUES ("Filip L", 500, 0);
+INSERT INTO People (name, inbetalat, inbetalatBuss) VALUES ("Casper", 425, 0);
+INSERT INTO People (name, inbetalat, inbetalatBuss) VALUES ("Samuel", 425, 1424);
+INSERT INTO People (name, inbetalat, inbetalatBuss) VALUES ("Hanna", 1615, 1428);
+INSERT INTO People (name, inbetalat, inbetalatBuss) VALUES ("Felix", 1025, 0);

@@ -118,7 +118,7 @@
 		<table>
 			<thead>
 				<tr>
-					<th colspan="4">
+					<th colspan="5">
 						Personer som ska med
 					</th>
 				</tr>
@@ -128,20 +128,24 @@
 						Namn
 					</th>
 					<th>
-						Ska betala
+						Ska betala för stugan
 					</th>
 					<th>
-						Inbetalat
+						Inbetalat för stugan
+					</th>
+					<th>
+						Inbetalat för bussen
 					</th>
 				</tr>
 			</thead>
 			<tbody>
-				{#each manniksor as {name, inbetalat}, i}
+				{#each manniksor as {name, inbetalat, inbetalatBuss}, i}
 					<tr>
 						<td>{i}.</td>
 						<td>{name}</td>
 						<td>{((totaltPrisStuga+forsakring)/antalMenniskor) - inbetalat}kr</td>
 						<td>{inbetalat}kr</td>
+						<td>{inbetalatBuss}</td>
 					</tr>
 				{/each}
 			</tbody>
